@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script>
+        function submitForm() {
+            const text = document.getElementById('text').value;
+            document.getElementById('loading').style.display = 'block'; // Show loading spinner
+            window.location.href = '/generate/' + encodeURIComponent(text);
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container text-center">
+    <h1 class="text-center">QR Code Generator</h1>
+    <div id="loading" style="display:none;">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+        <form onsubmit="submitForm(); return false;" class="form-inline justify-content-center">
+            <label for="text" class="sr-only">Enter text for QR Code:</label>
+            <input type="text" id="text" name="text" class="form-control mr-2" placeholder="Enter text" required>
+            <button type="submit" class="btn btn-primary">Generate QR Code</button>
+        </form>
+    </div>
+</body>
+</html>
