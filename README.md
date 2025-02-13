@@ -64,3 +64,23 @@ A simple web application that generates QR codes based on user input. The applic
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+
+
+## Output
+
+# Taking input from User
+
+![output1](https://github.com/user-attachments/assets/44211150-1a92-4a1b-9fd2-713fc0dcd19e)
+
+
+## Result
+
+
+![output2](https://github.com/user-attachments/assets/3f614a8a-ae81-4f7f-b0b4-94c5d3e7aae9)
+
+
+
+
+
